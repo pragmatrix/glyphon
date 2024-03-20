@@ -60,6 +60,7 @@ impl TextRenderer {
     }
 
     /// Prepares all of the provided text areas for rendering.
+    #[allow(clippy::too_many_arguments)]
     pub fn prepare_with_depth<'a>(
         &mut self,
         device: &Device,
@@ -349,6 +350,7 @@ impl TextRenderer {
         Ok(())
     }
 
+    #[allow(clippy::too_many_arguments)]
     pub fn prepare<'a>(
         &mut self,
         device: &Device,
