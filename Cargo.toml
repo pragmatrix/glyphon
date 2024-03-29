@@ -15,6 +15,6 @@ lru = { version = "0.12.1", default-features = false }
 rustc-hash = "1.1"
 
 [dev-dependencies]
-winit = { version = "0.29.10", features = ["rwh_05"] }
+winit = { version = "0.29.15", features = ["rwh_06"] }
 wgpu = { version = "0.20", default-features = true }
 pollster = "0.3.0"
