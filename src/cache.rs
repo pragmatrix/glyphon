@@ -20,6 +20,7 @@ use std::sync::{Arc, RwLock};
 pub struct Cache(Arc<Inner>);
 
 #[derive(Debug)]
+#[allow(clippy::type_complexity)]
 struct Inner {
     sampler: Sampler,
     shader: ShaderModule,
