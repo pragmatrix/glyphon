@@ -337,6 +337,7 @@ impl TextAtlas {
         self.color_atlas.trim();
     }
 
+    #[allow(clippy::too_many_arguments)]
     pub(crate) fn grow(
         &mut self,
         device: &wgpu::Device,

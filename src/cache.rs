@@ -29,6 +29,7 @@ struct Inner {
     atlas_layout: BindGroupLayout,
     uniforms_layout: BindGroupLayout,
     pipeline_layout: PipelineLayout,
+    #[allow(clippy::type_complexity)]
     cache: Mutex<
         Vec<(
             TextureFormat,

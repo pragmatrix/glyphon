@@ -96,7 +96,8 @@ fn run_bench(ctx: &mut Criterion) {
                     })
                     .collect();
 
-                criterion::black_box(
+                #[allow(clippy::unit_arg)]
+                std::hint::black_box(
                     text_renderer
                         .prepare(
                             &state.device,
