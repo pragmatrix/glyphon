@@ -1,4 +1,4 @@
-use wgpu::{BackendOptions, Dx12BackendOptions};
+use wgpu::BackendOptions;
 
 use pollster::block_on;
 
@@ -14,16 +14,7 @@ impl State {
             backends: wgpu::Backends::all(),
             memory_budget_thresholds: Default::default(),
             flags: wgpu::InstanceFlags::empty(),
-            backend_options: BackendOptions {
-                gl: wgpu::GlBackendOptions {
-                    gles_minor_version: wgpu::Gles3MinorVersion::Automatic,
-                    ..Default::default()
-                },
-                dx12: Dx12BackendOptions {
-                    shader_compiler: wgpu::Dx12Compiler::Fxc,
-                },
-                ..Default::default()
-            },
+            backend_options: BackendOptions::default(),
         });
 
         let adapter = block_on(wgpu::util::initialize_adapter_from_env_or_default(
